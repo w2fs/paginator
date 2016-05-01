@@ -1,0 +1,21 @@
+{
+  "name": "paginator",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Willin Wang"
+  ],
+  "license": "MIT",
+  "homepage": "http://willin.wang",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "instantclick": "^3.1.0",
+    "jquery": "^2.2.3"
+  }
+}

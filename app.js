@@ -1,18 +1,18 @@
+import Express from 'express';
 import {paginator} from './lib/paginator';
-import express from 'express';
-import path from 'path';
+import debug from 'debug';
 
-const app = express();
-app.use(express.static(path.join(__dirname, 'bower_components')));
-app.set('views', path.join(__dirname, 'views'));
+const app = new Express();
+
 app.set('view engine', 'jade');
+app.set('views', './views');
+app.use(Express.static('./www/lib'));
 
 app.get('/', async(req, res) => {
-  const page = parseInt(req.query.page, 10) || 1;
+  const page = parseInt(req.query.page || 1, 10) || 1;
   const data = await paginator(page, 1);
-  return res.render('index', {items: data});
+  debug('app:paginator')(data);
+  res.render('index', { items: data});
 });
 
-app.listen(3000, () => {
-  console.log('Paginator app listening on port 3000!');
-});
+app.listen(3000);

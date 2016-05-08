@@ -1,21 +1,22 @@
 {
   "name": "paginator",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "authors": [
-    "Willin Wang"
+    "Willin Wang <willin@willin.org>"
   ],
-  "license": "MIT",
-  "homepage": "http://willin.wang",
+  "license": "ISC",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "www/lib",
     "test",
     "tests"
   ],
   "dependencies": {
-    "instantclick": "^3.1.0",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "instantclick": "^3.1.0"
   }
 }
